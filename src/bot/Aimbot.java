@@ -9,7 +9,7 @@ public class Aimbot extends Robot {
     private static final int MONITOR_WIDTH = 2560;
     private static final int MONITOR_HEIGHT = 1440;
     /* top left corner of a square to scan */
-    private static final int SCAN_START_X = 1200; //
+    private static final int SCAN_START_X = 1200;
     private static final int SCAN_START_Y = 550;
     /* square height and width */
     private static final int SCAN_RANGE = 200;
