@@ -8,8 +8,10 @@ public class Aimbot extends Robot {
     private static final Color target = new Color(255, 134, 144);
     private static final int MONITOR_WIDTH = 2560;
     private static final int MONITOR_HEIGHT = 1440;
-    private static final int SCAN_START_X = 1200;
+    /* top left corner of a square to scan */
+    private static final int SCAN_START_X = 1200; //
     private static final int SCAN_START_Y = 550;
+    /* square height and width */
     private static final int SCAN_RANGE = 200;
     private static final int DELAY = 1;
 
@@ -27,9 +29,8 @@ public class Aimbot extends Robot {
                     targetIndex = i;
                 }
             }
-                int xPos = (targetIndex % SCAN_RANGE) + SCAN_START_X;
-                int yPos = (targetIndex / SCAN_RANGE) + SCAN_START_Y;
-
+            int xPos = (targetIndex % SCAN_RANGE) + SCAN_START_X;
+            int yPos = (targetIndex / SCAN_RANGE) + SCAN_START_Y;
             if (xPos > SCAN_START_X && xPos < MONITOR_HEIGHT && yPos > SCAN_START_Y && yPos < SCAN_START_Y+200) {
                 mouseMove(xPos, yPos);
             }
