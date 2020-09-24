@@ -20,7 +20,7 @@ public class Aimbot extends Robot {
     }
 
     public void aim() {
-        while (true) {
+        do {
             delay(DELAY);
             int[] tabOfColors = createScreenCapture(new Rectangle(MONITOR_WIDTH, MONITOR_HEIGHT)).getRGB(SCAN_START_X, SCAN_START_Y, SCAN_RANGE, SCAN_RANGE, null, 0, SCAN_RANGE);
             int targetIndex = 0;
@@ -31,10 +31,10 @@ public class Aimbot extends Robot {
             }
             int xPos = (targetIndex % SCAN_RANGE) + SCAN_START_X;
             int yPos = (targetIndex / SCAN_RANGE) + SCAN_START_Y;
-            if (xPos > SCAN_START_X && xPos < MONITOR_HEIGHT && yPos > SCAN_START_Y && yPos < SCAN_START_Y+200) {
+            if (xPos > SCAN_START_X && xPos < MONITOR_HEIGHT && yPos > SCAN_START_Y && yPos < SCAN_START_Y + 200) {
                 mouseMove(xPos, yPos);
             }
-        }
+        } while (true);
     }
 
 }
